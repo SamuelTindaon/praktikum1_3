@@ -23,14 +23,16 @@
  Untuk mengetahui ekstensi tersebut telah aktif atau belum, kita bisa mengetahui nya melalui powershell atau command prompt dengan cara:
  
  ### Catatan : mulai dari PHP 7.0, ekstensi JSON biasanya sudah termasuk secara bawaan.
- ![alt text](img/ekstensi.png)
+ ![ekstensi](https://github.com/user-attachments/assets/6eada84d-9426-4e91-93cc-12e1ea580e37)
+
  
  Lalu kalian bisa mencari ekstensi yang kalian butuhkan, jika ada yang belum diaktivasi kalian dapat mengaktifkan ekstensi tersebut, melalu XAMPP Control Panel, pada bagian Apache
  klik Config -> PHP.ini :
+![ekstensi2](https://github.com/user-attachments/assets/ff093a58-1cb5-4032-9e33-168ee69932a5)
+
  
- ![alt text](img/ekstensi2.png)
- 
- ![alt text](img/intl.png)
+ ![intl](https://github.com/user-attachments/assets/81acec29-018e-41f5-adb4-1e272b6f9887)
+
  * Contohnya disini extension=intl belum aktif, maka cara mengaktivasinya adalah dengan menghilangkan tanda ; (titik koma) pada ekstensi yang akan diaktifkan. Kemudian simpan kembali filenya dan restart Apache web server.
  
  ## Instalasi Codeigniter 4
@@ -41,41 +43,48 @@
  * Ubah nama direktory codeigniter4-framework-v4.x.xx menjadi ci4.
  * Buka browser dengan alamat http://localhost/lab11_ci/ci4/public/
  
- ![alt text](img/localhost1.png)
+![localhost1](https://github.com/user-attachments/assets/4716aad2-6d0e-4d75-8eca-cbcd17f2cefb)
+
  
  ## Menjalankan CLI (Command Line Interface)
  Codeigniter 4 menyediakan CLI untuk mempermudah proses development. Untuk mengakses CLI buka Shell pada XAMPP.
  
- ![alt text](img/Shell.png)
+![Shell](https://github.com/user-attachments/assets/5a3cec5b-5f28-48c6-805c-367d32055ca9)
+
  
  Arahkan lokasi direktori sesuai dengan direktori kerja project dibuat (Contoh : cd htdocs/lab11_ci/ci4)
  
  Perintah yang dapat dijalankan untuk memanggil CLI Codeigniter adalah:
  
  ### php spark
- ![alt text](img/spark.png)
+![spark](https://github.com/user-attachments/assets/82de5a27-563f-41eb-8f39-6c2c1492de97)
+
  
  ## Mengaktifkan Mode Debugging
  Codeigniter 4 menyediakan fitur debugging untuk memudahkan developer untuk mengetahui pesan error apabila terjadi kesalahan dalam membuat kode program.
  
  Secara default fitur ini belum aktif. Ketika terjadi error pada aplikasi akan ditampilkan pesan kesalahan seperti berikut.
  
- ![alt text](img/Whoops.png)
+![Whoops](https://github.com/user-attachments/assets/ab571c36-7d4c-442e-936d-bc8f33e4dbe7)
+
  
  Semua jenis error akan ditampilkan sama. Untuk memudahkan mengetahui jenis errornya,
  maka perlu diaktifkan mode debugging dengan mengubah nilai konfigurasi pada environment
  variable CI_ENVIRONMENT menjadi development.
- ![alt text](img/development.png)
+ ![development](https://github.com/user-attachments/assets/a2f2d739-2571-46d3-93c0-93cf331fec1a)
+
  
  Ubah nama file env menjadi .env kemudian buka file tersebut dan ubah nilai variable
  CI_ENVIRONMENT menjadi development.
  #### Catatan : Kadang, CodeIgniter tidak membaca file .env karena masih dikomentari, pastikan tidak ada tanda # di depan CI_ENVIRONMENT.
  
- ![alt text](img/error.png)
+![error](https://github.com/user-attachments/assets/c2bf2cbd-cbeb-4253-a6b5-449314a037d2)
+
  
  Contoh error yang terjadi. Untuk mencoba error tersebut, ubah kode pada file
  app/Controller/Home.php hilangkan titik koma pada akhir kode return view('welcome_message').
- ![alt text](img/coba.png)
+ ![coba](https://github.com/user-attachments/assets/f75c944a-e671-4299-9a58-41b876b5a613)
+
  
  ## Memahami konsep MVC
  Codeigniter menggunakan konsep MVC. MVC meripakan singkatan dari Model-View-
@@ -98,7 +107,8 @@
  meudian oleh router tesebut diarahkan ke Controller.
  
  Router terletak pada file app/config/Routes.php
- ![alt text](img/Routes.png)
+![Routes](https://github.com/user-attachments/assets/9fa64af3-c588-44fd-a21b-2b7ed4834de2)
+
  
  Pada file tersebut kita dapat mendefinisikan route untuk aplikasi yang kita buat.
  Contoh:
@@ -117,10 +127,12 @@
  Untuk mengetahui route yang ditambahkan sudah benar, buka CLI dan jalankan perintah berikut.
  
  php spark routes
- ![alt text](<img/spark routes.png>)
+![spark routes](https://github.com/user-attachments/assets/ff274791-e425-4426-a954-e45e80dcfee4)
+
  
  Selanjutnya coba akses route yang telah dibuat dengan mengakses alamat url http://localhost:8080/about
- ![alt text](img/404.png)
+![404](https://github.com/user-attachments/assets/48a49800-dd39-4c9f-9017-876d8d8417e5)
+
  
  Ketika diakses akan mucul tampilan error 404 file not found, itu artinya file/page tersebut tidak ada. Untuk dapat mengakses halaman tersebut, harus dibuat terlebih dahulu Contoller yang sesuai dengan routing yang dibuat yaitu Contoller Page.
  
@@ -149,7 +161,8 @@
  }
  ````
  
- ![alt text](img/about.png)
+ ![about](https://github.com/user-attachments/assets/58c151b5-a801-485f-a8fe-12557d1d15d4)
+
  
  #### Auto Routing
  Secara default fitur autoroute pada Codeiginiter sudah aktif. Untuk mengubah status autoroute dapat mengubah nilai variabelnya. Untuk menonaktifkan ubah nilai true menjadi false.
@@ -168,7 +181,8 @@
  ````
  
  Method ini belum ada pada routing, sehingga cara mengaksesnya dengan menggunakan alamat: http://localhost:8080/page/tos
- ![alt text](img/tos.png)
+![tos](https://github.com/user-attachments/assets/e87f152c-69b5-44f1-ba4f-4751b44a28fc)
+
  
  ### Membuat View
  Selanjutnya adalam membuat view untuk tampilan web agar lebih menarik. Buat file baru dengan nama about.php pada direktori Views (app/Views/about.php) kemudian isi kodenya seperti berikut.
@@ -203,14 +217,16 @@
  
  Kemudian lakukan refresh pada halaman tersebut.
  
- ![alt text](img/About2.png)
+![About2](https://github.com/user-attachments/assets/6cb5a8aa-02bd-4d07-90fc-7a65f9a58367)
+
  
  ### Membuat Layout Web dengan CSS
  Pada dasarnya layout web dengan css dapat diimplamentasikan dengan mudah pada codeigniter. Yang perlu diketahui adalah, pada Codeigniter 4 file yang menyimpan asset css dan javascript terletak pada direktori public.
  
  Buat file css pada direktori public dengan nama style.css
  
- ![alt text](img/style.png)
+ ![style](https://github.com/user-attachments/assets/8ec3ebd2-8e6c-45f6-a27c-d09d19645fdc)
+
  
  Kemudian buat folder template pada direktori view kemudian buat file header.php dan footer.php
  
